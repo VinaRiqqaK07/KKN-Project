@@ -4,8 +4,25 @@
             <h1 class="mb-4 text-3xl font-medium">Aparat Desa</h1>
             <hr />
             <section
-                class="mt-4 flex flex-wrap justify-between overflow-y-auto px-1 py-1"
+                class="mt-4 flex flex-wrap justify-between overflow-y-auto px-1 py-1 gap-12"
             >
+                @foreach ($officialsList as $officials)
+                    <x-employee-card>
+                        @if ($officials->imageUrl)
+                            <x-slot:imageUrl>
+                                {{ $officials->imageUrl }}
+                            </x-slot>
+                        @endif
+
+                        <x-slot:name>
+                            {{ $officials->official_name }}
+                        </x-slot>
+                        <x-slot:jabatan>
+                            {{ $officials->positionName }}
+                        </x-slot>
+                    </x-employee-card>
+                @endforeach
+
                 <x-employee-card></x-employee-card>
                 <x-employee-card></x-employee-card>
                 <x-employee-card></x-employee-card>

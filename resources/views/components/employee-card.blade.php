@@ -1,6 +1,11 @@
-<div class="w-56 h-64">
-    <div class="w-full h-48 bg-gray-200"></div>
-    <div class="w-full h-16 bg-cyan-300 flex flex-col items-center justify-center">
+<div class="h-64 w-56">
+    <img
+            src="{{ asset($imageUrl ?? "storage/image_notfound.jpeg") }}"
+            class="h-48 w-full"
+        />
+    <div
+        class="flex h-16 w-full flex-col items-center justify-center bg-cyan-300"
+    >
         <p class="font-medium">{{ $name ?? "Nama Orang" }}</p>
         <p>{{ $jabatan ?? "Nama Jabatan" }}</p>
     </div>
