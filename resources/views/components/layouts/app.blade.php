@@ -29,7 +29,6 @@
             </section>
             <section class="flex gap-8">
                 <a href="/home"><p>Home</p></a>
-
                 <section
                     class="relative"
                     x-data="{

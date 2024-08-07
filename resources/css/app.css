@@ -5,3 +5,22 @@
 [x-cloak] {
     display: none !important;
 }
+
+.custom-content-desc-news p {
+    @apply my-1;
+    @apply text-sm;
+}
+
+.custom-content-desc-news h2 {
+    @apply text-2xl;
+    @apply font-semibold;
+}
+
+.custom-content-desc-news h3 {
+    @apply text-xl;
+    @apply font-medium;
+}
+
+hr {
+    border: 1px solid rgb(131, 131, 131);
+}
