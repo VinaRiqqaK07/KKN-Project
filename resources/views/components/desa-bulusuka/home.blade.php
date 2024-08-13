@@ -75,7 +75,7 @@
             <section class="flex flex-col gap-2 py-8">
                 <h1 class="text-2xl font-semibold">Aparat Desa</h1>
                 <hr />
-                <section class="flex items-center justify-center gap-16 py-8">
+                <section class="flex flex-wrap items-center justify-center gap-16 py-8">
                     @foreach ($officialsList as $officials)
                         <x-employee-card>
                             @if ($officials->imageUrl)
