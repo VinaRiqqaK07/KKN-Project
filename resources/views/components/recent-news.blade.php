@@ -1,16 +1,16 @@
-<div class="flex gap-6">
+<div class="flex flex-wrap md:flex-nowrap gap-6 mb-4">
     <img
-        src="{{ asset("storage/image_notfound.jpeg") }}"
+        src="{{ asset($newsImageUrl ?? "storage/image_notfound.jpeg") }}"
         alt="Image Not Available"
-        class="h-40 w-64"
+        class="h-40 w-64 border border-slate-300"
     />
     <section class="flex flex-col gap-1">
         <p class="text-xl font-medium">
-            {{ $news_title ?? "Judul Berita" }}
+            {{ $newsTitle ?? "Judul Berita" }}
         </p>
         <p class="text-sm text-slate-500">
             {{
-                $desc_news ??
+                $newsContent ??
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Accusamus assumenda excepturi harum maiores ipsa,
                                         provident iure doloribus molestiae. Doloribus fuga,

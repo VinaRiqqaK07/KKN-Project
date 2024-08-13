@@ -1,12 +1,14 @@
-<div class="h-64 w-56">
+<div class="md:h-64 md:w-56">
     <img
-            src="{{ asset($imageUrl ?? "storage/image_notfound.jpeg") }}"
-            class="h-48 w-full"
-        />
+        src="{{ asset($imageUrl ?? "storage/no-pic-men.jpg") }}"
+        class="md:w-full bg-gray-500 md:h-48"
+    />
     <div
-        class="flex h-16 w-full flex-col items-center justify-center bg-cyan-300"
+        class="flex w-full flex-col items-center justify-center bg-cyan-300 h-fit py-2 md:h-16 md:py-0"
     >
-        <p class="font-medium">{{ $name ?? "Nama Orang" }}</p>
-        <p>{{ $jabatan ?? "Nama Jabatan" }}</p>
+        <p class="text-xs font-medium md:text-base">
+            {{ $name ?? "Nama Orang" }}
+        </p>
+        <p class="text-xs md:text-base">{{ $jabatan ?? "Nama Jabatan" }}</p>
     </div>
 </div>

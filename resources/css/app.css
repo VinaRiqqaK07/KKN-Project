@@ -6,19 +6,43 @@
     display: none !important;
 }
 
-.custom-content-desc-news p {
+.custom-content-news p {
     @apply my-1;
-    @apply text-sm;
+    @apply text-base;
 }
 
-.custom-content-desc-news h2 {
+.custom-content-desc-news p {
+    @apply text-slate-500;
+    @apply mb-2;
+}
+
+.custom-content-news h2 {
     @apply text-2xl;
     @apply font-semibold;
+    @apply my-2;
 }
 
-.custom-content-desc-news h3 {
+.custom-content-news h3 {
     @apply text-xl;
     @apply font-medium;
+    @apply my-2;
+}
+
+.custom-content-news ul {
+    @apply list-disc;
+    @apply indent-1;
+    @apply ps-8;
+}
+
+.custom-content-news ol {
+    @apply list-decimal;
+    @apply indent-1;
+    @apply ps-8;
+}
+
+.custom-content-news a {
+    @apply text-blue-400;
+    @apply underline;
 }
 
 hr {

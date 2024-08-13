@@ -1,6 +1,6 @@
 <x-layouts.app>
     <x-slot:slot>
-        <main class="flex h-full w-full flex-col items-center gap-8 py-10">
+        <main class="flex h-full w-full flex-col items-center gap-16 py-10">
             @foreach ($noticesList as $notice)
                 <a href="{{ route("notices.show", $notice->id) }}">
                     <x-notice-card>
@@ -19,14 +19,14 @@
                         <x-slot:noticeLocation>
                             {{ $notice->notice_location }}
                         </x-slot>
-                        <x-slot:noticeLocation>
+                        <x-slot:noticeDate>
                             {{ $notice->notice_date }}
                         </x-slot>
-                        <!--<x-slot:noticeContent>
-                        <div class="custom-content-desc-news">
-                            {!! $notice->content !!}
-                        </div>
-                    </x-slot>-->
+                        <x-slot:noticeContent>
+                            <div class="custom-content-desc-news">
+                                {!! $notice->limitedContent !!}
+                            </div>
+                        </x-slot>
                     </x-notice-card>
                 </a>
             @endforeach
