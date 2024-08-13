@@ -4,7 +4,7 @@
             <h1 class="mb-4 text-3xl font-medium">Aparat Desa</h1>
             <hr />
             <section
-                class="mt-4 flex flex-wrap justify-start overflow-y-auto px-1 py-1 gap-8"
+                class="mt-4 flex flex-wrap justify-start gap-8 overflow-y-auto px-1 py-1"
             >
                 @foreach ($officialsList as $officials)
                     <x-employee-card>
@@ -23,11 +23,12 @@
                     </x-employee-card>
                 @endforeach
 
+                <!--
                 <x-employee-card></x-employee-card>
                 <x-employee-card></x-employee-card>
                 <x-employee-card></x-employee-card>
                 <x-employee-card></x-employee-card>
-                <x-employee-card></x-employee-card>
+                <x-employee-card></x-employee-card>-->
             </section>
         </main>
     </x-slot>
