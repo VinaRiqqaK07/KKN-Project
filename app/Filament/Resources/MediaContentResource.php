@@ -42,6 +42,9 @@ class MediaContentResource extends Resource
                         ->options([
                             'banner' => 'Banner',
                             'struktur' => 'Struktur Organisasi',
+                            'logo' => 'Logo Website',
+                            'image-not-available' => "Gambar Kosong",
+                            'aparat-not-available' => "Foto Aparat Kosong",
                         ])
                         ->columnSpan(2)    
                         ->required(),
