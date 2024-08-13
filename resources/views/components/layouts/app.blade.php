@@ -18,26 +18,41 @@
     </head>
     <body class="h-full w-full">
         <header
-            class="flex h-24 w-full items-center justify-between bg-red-500 px-12"
+            class="sticky left-0 top-0 z-50 flex w-full flex-wrap items-center justify-between bg-[#609af7] px-12 py-4"
+            x-data="{ open: false }"
         >
             <section class="flex items-center gap-6">
-                <div class="h-16 w-16 rounded-full bg-blue-500"></div>
-                <section>
+                <img
+                    src="{{ asset("storage/Jeneponto.png") }}"
+                    class="h-20 w-20 rounded-full"
+                />
+                <section class="w-full">
                     <p class="text-xl font-medium">Desa Bulusuka</p>
                     <p>Kabupaten Jeneponto</p>
                 </section>
             </section>
-            <section class="flex gap-8">
-                <a href="/home"><p>Home</p></a>
+
+            <!-- Burger button for mobile view -->
+            <button
+                class="focus:shadow-outline rounded-lg focus:outline-none md:hidden"
+                @click="open = !open"
+            >
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Main navigation -->
+            <section
+                :class="{'flex': open, 'hidden': !open}"
+                class="hidden flex-col py-2 md:flex md:flex-row md:items-center"
+            >
+                <a href="/home" class="px-4">Home</a>
                 <section
-                    class="relative"
-                    x-data="{
-                        open: null,
-                    }"
+                    class="flex flex-col md:flex md:flex-row md:items-center"
+                    x-data="{ open: null }"
                     @click.away="open = null"
                 >
                     <!-- Profil Desa -->
-                    <div class="inline-block">
+                    <div class="ml-4 inline-block">
                         <p
                             @click="open = (open === 'profil' ? null : 'profil')"
                             class="flex cursor-pointer items-center"
@@ -126,25 +141,28 @@
             </section>
         </header>
         {{ $slot }}
-        <footer>
+        <footer class="flex flex-col bottom-0 left-0 w-full mt-4">
             <section
-                class="flex h-60 w-full gap-16 bg-gray-200 px-12 pb-12 pt-8"
+                class="flex min-h-60 w-full flex-wrap gap-16 bg-[#609af7] px-12 pb-12 pt-8"
             >
-                <div class="h-36 w-36 rounded-full bg-blue-500"></div>
+                <img
+                    src="{{ asset("storage/Jeneponto.png") }}"
+                    class="h-36 w-36 rounded-full"
+                />
                 <section>
                     <p class="text-2xl font-bold">Kontak Kami</p>
                     <section class="my-2">
-                        <p>Jalan nama jalan</p>
-                        <p>Kode pos</p>
+                        <p>Jl. Nama Jalan</p>
+                        <p>Kode Pos :</p>
                     </section>
                     <section class="my-2">
-                        <p>
-                            <i></i>
-                            Nomor telepon
+                        <p class="">
+                            <i class="fa-solid fa-phone"></i>
+                            - +628123456790
                         </p>
-                        <p>
-                            <i></i>
-                            email
+                        <p class="">
+                            <i class="fa-solid fa-envelope"></i>
+                            - email@gmail.com
                         </p>
                     </section>
                     <section>
@@ -152,7 +170,13 @@
                     </section>
                 </section>
             </section>
-            <section class="h-10 w-full bg-gray-500"></section>
+            <section
+                class="flex h-10 w-full flex-col items-center justify-center bg-[#4368a2]"
+            >
+                <p class="text-sm font-medium text-white">
+                    Copyrights - All Rights Reserved
+                </p>
+            </section>
         </footer>
     </body>
 </html>

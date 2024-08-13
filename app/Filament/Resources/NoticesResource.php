@@ -19,6 +19,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\SelectColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
@@ -52,7 +53,6 @@ class NoticesResource extends Resource
                         ->label('Tanggal & Waktu')
                         ->required(),
                     Select::make('users_id')
-                        ->relationship(name: 'users', titleAttribute: 'name')
                         ->label('Penerbit')
                         ->options(User::all()->pluck('name', 'id'))
                         ->searchable()
@@ -60,10 +60,16 @@ class NoticesResource extends Resource
                     Toggle::make('status')
                         ->label('Posting')
                         ->inline(false)
-                        ->declined()
                         ->onColor('success'),
                     RichEditor::make('content')
                         ->label('Isi Pengumuman')
+                        ->disableToolbarButtons([
+                            'attachFiles',
+                            'blockquote',
+                            'codeBlock',
+                            'undo',
+                            'redo'
+                        ])
                         ->columnSpan(2)
                         ->required(),
                 ])
@@ -86,15 +92,13 @@ class NoticesResource extends Resource
                     }
                 ),
                 SpatieMediaLibraryImageColumn::make('notices_image')
-                    ->label('Cover Pengumuman')
+                    ->label('Cover')
                     ->square(),
                 TextColumn::make('title')
-                    ->label('Judul Pengumuman')
+                    ->label('Judul')
                     ->limit('25'),
-                TextColumn::make('users.name')
-                    ->label('Penerbit'),
-                TextColumn::make('notice_location')
-                    ->label('Lokasi'),
+                TextColumn::make('users_id')
+                    ->label('ID Penerbit'),
                 TextColumn::make('notice_date')
                     ->label('Tanggal & Waktu')
                     ->sortable(),

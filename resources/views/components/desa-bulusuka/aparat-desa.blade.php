@@ -4,7 +4,7 @@
             <h1 class="mb-4 text-3xl font-medium">Aparat Desa</h1>
             <hr />
             <section
-                class="mt-4 flex flex-wrap justify-between overflow-y-auto px-1 py-1 gap-12"
+                class="mt-4 flex flex-wrap justify-start overflow-y-auto px-1 py-1 gap-8"
             >
                 @foreach ($officialsList as $officials)
                     <x-employee-card>

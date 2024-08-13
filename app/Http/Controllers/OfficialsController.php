@@ -21,7 +21,7 @@ class OfficialsController extends Controller
                 $officials->imageUrl = null;
             }
 
-            $officials->positionName = $officials->positions->name ?? null;
+            $officials->positionName = $officials->positions->position_name ?? null;
         });
 
         return view('components.desa-bulusuka.aparat-desa', compact('officialsList'));
