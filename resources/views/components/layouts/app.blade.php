@@ -152,9 +152,10 @@
                 <section>
                     <p class="text-2xl font-bold">Kontak Kami</p>
                     <section class="my-2">
-                        <p>Jl. Nama Jalan</p>
-                        <p>Kode Pos :</p>
+                        <p>Jl. Poros Tappalalo - Bulo Bulo, Desa Bulusuka, Kec. Bontoramba, Kab. Jeneponto</p>
+                        <p>Kode POS : 92351</p>
                     </section>
+                    <!--
                     <section class="my-2">
                         <p class="">
                             <i class="fa-solid fa-phone"></i>
@@ -164,7 +165,7 @@
                             <i class="fa-solid fa-envelope"></i>
                             - email@gmail.com
                         </p>
-                    </section>
+                    </section>-->
                     <section>
                         <i></i>
                     </section>

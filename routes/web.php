@@ -52,5 +52,5 @@ Route::resource('/aparat', OfficialsController::class);
 Route::resource('/home', HomeController::class);
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home');
 });
