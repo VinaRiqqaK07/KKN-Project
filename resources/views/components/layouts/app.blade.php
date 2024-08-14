@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="csrf-token" content="{{ csrf_token() }}" />
+        <meta name="google-site-verification" content="Pga_zUXBsT-asiuUAseQ_x2mxxerMBtSIThnI7uzFOs" />
         <title>Desa Bulusuka</title>
         <script src="//unpkg.com/alpinejs" defer></script>
         <link
