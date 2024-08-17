@@ -31,7 +31,8 @@ class OfficialsResource extends Resource
 {
     protected static ?string $model = Officials::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationGroup = 'Aparat Desa';
 
     public static function form(Form $form): Form
     {

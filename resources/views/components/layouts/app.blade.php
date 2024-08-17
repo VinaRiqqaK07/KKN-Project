@@ -177,7 +177,7 @@
                 class="flex h-10 w-full flex-col items-center justify-center bg-[#4368a2]"
             >
                 <p class="text-sm font-medium text-white">
-                    Copyrights - All Rights Reserved
+                    Copyrights - KKN T 112 UNHAS @Bulusuka
                 </p>
             </section>
         </footer>
