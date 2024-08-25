@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="csrf-token" content="{{ csrf_token() }}" />
-        <meta name="google-site-verification" content="Pga_zUXBsT-asiuUAseQ_x2mxxerMBtSIThnI7uzFOs" />
+        <meta
+            name="google-site-verification"
+            content="Pga_zUXBsT-asiuUAseQ_x2mxxerMBtSIThnI7uzFOs"
+        />
         <title>Desa Bulusuka</title>
         <script src="//unpkg.com/alpinejs" defer></script>
         <link
@@ -23,13 +26,20 @@
             x-data="{ open: false }"
         >
             <section class="flex items-center gap-6">
-                <img
-                    src="{{ asset("storage/Jeneponto.png") }}"
-                    class="h-20 w-20 rounded-full"
-                />
+                @if (isset($logos))
+                    <img
+                        src="{{ asset($logos->imageUrl) }}"
+                        class="h-14 w-14 rounded-full md:h-20 md:w-20"
+                    />
+                @else
+                    <img
+                        src="{{ asset("storage/Jeneponto.png") }}"
+                        class="h-14 w-14 rounded-full md:h-20 md:w-20"
+                    />
+                @endif
                 <section class="w-full">
-                    <p class="text-xl font-medium">Desa Bulusuka</p>
-                    <p>Kabupaten Jeneponto</p>
+                    <p class="text-lg font-medium md:text-xl">Desa Bulusuka</p>
+                    <p class="text-sm md:text-base">Kabupaten Jeneponto</p>
                 </section>
             </section>
 
@@ -38,7 +48,7 @@
                 class="focus:shadow-outline rounded-lg focus:outline-none md:hidden"
                 @click="open = !open"
             >
-                <i class="fa-solid fa-bars text-2xl"></i>
+                <i class="fa-solid fa-bars text-xl md:text-2xl"></i>
             </button>
 
             <!-- Main navigation -->
@@ -142,18 +152,28 @@
             </section>
         </header>
         {{ $slot }}
-        <footer class="flex flex-col bottom-0 left-0 w-full mt-4">
+        <footer class="bottom-0 left-0 mt-4 flex w-full flex-col">
             <section
                 class="flex min-h-60 w-full flex-wrap gap-16 bg-[#609af7] px-12 pb-12 pt-8"
             >
-                <img
-                    src="{{ asset("storage/Jeneponto.png") }}"
-                    class="h-36 w-36 rounded-full"
-                />
+                @if (isset($logos))
+                    <img
+                        src="{{ asset($logos->imageUrl) }}"
+                        class="h-36 w-36 rounded-full"
+                    />
+                @else
+                    <img
+                        src="{{ asset("storage/Jeneponto.png") }}"
+                        class="h-36 w-36 rounded-full"
+                    />
+                @endif
                 <section>
                     <p class="text-2xl font-bold">Kontak Kami</p>
                     <section class="my-2">
-                        <p>Jl. Poros Tappalalo - Bulo Bulo, Desa Bulusuka, Kec. Bontoramba, Kab. Jeneponto</p>
+                        <p>
+                            Jl. Poros Tappalalo - Bulo Bulo, Desa Bulusuka, Kec.
+                            Bontoramba, Kab. Jeneponto
+                        </p>
                         <p>Kode POS : 92351</p>
                     </section>
                     <!--
@@ -177,7 +197,8 @@
                 class="flex h-10 w-full flex-col items-center justify-center bg-[#4368a2]"
             >
                 <p class="text-sm font-medium text-white">
-                    Copyrights - KKN T 112 UNHAS @Bulusuka
+                    Copyrights - KKN T 112 UNHAS
+                    @Bulusuka
                 </p>
             </section>
         </footer>

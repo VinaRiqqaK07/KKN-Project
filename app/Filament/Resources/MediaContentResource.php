@@ -44,8 +44,6 @@ class MediaContentResource extends Resource
                             'banner' => 'Banner',
                             'struktur' => 'Struktur Organisasi',
                             'logo' => 'Logo Website',
-                            'image-not-available' => "Gambar Kosong",
-                            'aparat-not-available' => "Foto Aparat Kosong",
                         ])
                         ->columnSpan(2)    
                         ->required(),
@@ -80,6 +78,7 @@ class MediaContentResource extends Resource
                     ->color(fn (string $state): string => match ($state) {
                         'banner' => 'success',
                         'struktur' => 'warning',
+                        'logo' => 'info',
                     })
             ])
             ->filters([

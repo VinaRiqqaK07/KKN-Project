@@ -1,4 +1,4 @@
-<div class="flex h-full w-full flex-col gap-3 px-8 md:w-[80vh] md:px-0">
+<div class="flex h-full w-full flex-col gap-3 px-8 xl:w-[80vh] md:px-0">
     <img
         src="{{ asset($noticeImageUrl ?? "storage/image_notfound.jpeg") }}"
         class="w-fill h-72 border border-slate-300"
