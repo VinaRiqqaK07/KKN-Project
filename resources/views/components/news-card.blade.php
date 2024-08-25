@@ -2,7 +2,7 @@
     use Illuminate\Support\Str;
 @endphp
 
-<div class="flex h-full flex-col gap-3 px-8 md:w-[80vh] md:px-0">
+<div class="flex h-full flex-col gap-3 px-8 xl:w-[80vh] md:px-0">
     <img
         src="{{ asset($newsImageUrl ?? "storage/image_notfound.jpeg") }}"
         class="md:h-72 w-full border border-slate-300"
